@@ -558,6 +558,461 @@ let pwd      = true
 userName == pwd ? console.log("allow the home page") : console.log("your username and pwd wrong");
 
 
+console.clear();
+
+
+// Type Casting 
+
+// 1. implicit Type Casting 
+
+
+console.log(typeof(45 + "hello"));
+
+
+// string 
+// string anything is string
+
+
+console.log(typeof("hello" + "hello"));
+console.log(typeof("hello" + 45));
+console.log(typeof("hello" + true));
+console.log(typeof("hello" + undefined));
+console.log(typeof("hello" + null));
+
+console.log(typeof("hello" + [1,2]));
+console.log(typeof("hello" + {k:5}));
+
+
+console.log("number implicit type casting");
+
+
+// number 
+
+
+console.log(typeof(123 + "hello"));
+console.log(typeof(123 + 123));
+console.log(typeof(123 + true));
+console.log(typeof(123 + undefined));
+console.log(typeof(123 + null));
+
+console.log(typeof(123 + [3,4]));
+console.log(typeof(123 + {h:6}));
+
+
+// boolean 
+
+
+console.log("boolean implicit type casting");
+
+
+console.log(typeof(true + "hello"));
+console.log(typeof(true + 123));
+console.log(typeof(true + true));
+console.log(typeof(true + undefined));
+console.log(typeof(true + null));
+
+console.log(typeof(true + [1,2]));
+console.log(typeof(true + {k:6}));
+
+
+
+
+
+
+
+
+
+
+
+// 2. Explicit Type Casting
+
+// constractor
+
+// Number()
+
+
+console.log(typeof(11 + Number("11")))
+
+console.log(Number());
+console.log(Number(""));
+console.log(Number("123"));
+console.log(Number("abc"));
+console.log(Number(true));
+console.log(Number(-123));
+console.log(Number(undefined));
+console.log(Number(null));
+
+console.log(Number([1,2,3]));
+console.log(Number({h:5}));
+
+
+
+// Boolean()
+
+
+console.log(Boolean());
+console.log(Boolean(""));
+console.log(Boolean("123"));
+console.log(Boolean("abc"));
+console.log(Boolean(true));
+console.log(Boolean(-20));
+
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+
+
+console.log(Boolean([]) );
+console.log(Boolean({l:5}) );
+
+console.clear();
+
+
+
+// Flow Control statement 
+
+
+
+// 1. conditional statement 
+
+// 1. if statement
+
+// syntex :-  
+
+// if(condition){
+//     statement
+// }
+
+// flow :-  condition = true , allow statement
+
+
+// example :- 
+
+
+if(5===50){
+    console.log("hello");
+    
+}
+
+console.log("hi");
+
+
+// 2. if - else statement 
+
+
+// syntex :- 
+
+// if(condition){
+//     statement
+// }else{
+//     statement
+// }
+
+// flow :-  condition = true, if inside allow. condition = false , else inside allow
+
+
+// example :- 
+
+
+if(5===5){
+    console.log("1");
+    
+}else{
+    console.log("wrong");
+    
+}
+
+
+// else if statement 
+
+
+let time = 25
+
+if(time>=1 && time <= 6){
+    console.log("good Morning");
+    
+}else if(time >= 7 && time <= 12){
+    console.log("morning");
+    
+}else if(time >= 13 && time <= 15){
+    console.log("good afternoon");
+    
+}else if(time >= 16 && time <= 18){
+    console.log("Good evening");
+    
+}else if(time >= 19 && time <= 24){
+    console.log("Good night");
+    
+}else{
+    console.log("time invalid");
+    
+}
+
+
+
+// nested if statement
+
+
+// // police selection application 
+
+
+
+// // if(age>=18){
+// //     if(height >= 155){
+// //         if(weight >= 55){
+// //             console.log("Your are eligible");
+            
+// //         } e1se {
+// //             console.log("weight is not eligible");
+            
+// //         }
+// //     }else{
+// //         console.log("height is not eligible");
+        
+// //     }
+// // }else{
+// //     console.log("age is not eligible");
+    
+// // }
+
+
+
+// let age1 =     prompt("enter your age?")
+// let weight1 = prompt("enter your weight ? kg")
+// let height1 = prompt("enter your height ? cm")
+
+
+// if (age1 >= 18){
+//     if(weight1 >= 55){
+//         if(height1 >= 155){
+//             alert("congradulation your selected");
+            
+//         }else{
+//             alert("height is not eligibe");
+//         }
+        
+//     }else{
+//         alert("weight is not eligible");
+        
+//     }
+// }else{
+//     alert("age is not eligible");
+    
+// }
+
+
+
+// switch statement 
+
+
+// switch(condition){
+//     case value : statement ; break
+//     case value : statement ; break
+//     case value : statement ; break
+//     case value : statement ; break
+//     case value : statement ; break
+// }
+
+
+
+// let trafficLight = "n"
+
+// switch(trafficLight){
+//     case "red" : console.log("stop the vechile");break;
+//     case "yellow" : console.log("start the vechile"); break;
+//     case "green"  : console.log("go vechile");break
+
+//     default : console.log("have nice day");
+    
+    
+    
+    
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 2. looping statement
+
+
+// 1. for loop 
+
+// for(intialization ; condition ; iteration){
+
+// statement
+
+// }
+
+
+for(let a = 1 ; a <= 3 ; a++){
+    console.log(a); // 1 2 3
+    
+}
+
+
+// a=1    ;  1 <= 3 = true ; 1++ = 2
+// a=2    ;  2 <= 3 = true ; 2++ = 3
+// a=3    ;  3 <= 3 = true ; 3++ = 4
+// a=4    ;  4 <= 3 = false.
+
+
+// 2. while loop 
+
+
+// syntex :- 
+
+// intialization 
+
+// while(condition){
+//     statement 
+
+//     iteration 
+// }
+
+
+// examle :- 
+
+
+let val = 4
+
+while(val >= 10){
+    console.log("while loop : ",val);
+
+    val--
+    
+}
+
+
+//val =  4  , 4 >= 0 = true , (4) , 4-- = 3,
+// val = 3  , 3 >= 0 = true , (3) , 3-- = 2,
+// val = 2  , 2 >= 0 = true , (2) , 2-- = 1,
+// val = 1  , 1 >= 0 = true , (1) , 1-- = 0,
+// val = 0  , 0 >= 0 = true , (0) , 0-- = -1
+// val = -1 . -1 > = 0 = false.
+
+// 3. do while loop 
+
+
+// syntex :- 
+
+// intialization 
+
+// do{
+//     statement 
+
+//     iteration 
+// }
+
+// while(condtion)
+
+
+
+// example :- 
+
+
+let val1 = 4 // 3 // 2 // 1 // 0 
+
+do{
+    console.log("do while :- ",val1); // 4 3 2 1 0 
+
+    val1--  // 4-- = 3  // 3-- = 2 // 2-- = 1  // 1-- = 0 // 0-- = -1
+    
+}
+
+while(val1 >= 0 ) // -1 >= 0 false.
+
+
+// 4. for of loop - [array , string , function]
+
+
+let str = "javascript"
+let array = ["apple","samsung","black berry","xiomi"]
+
+
+// syntex 
+
+// for(let a of str ){
+//     statement
+    
+// }
+
+
+// example 
+
+for(let a of str){
+    console.log(a);
+    
+}
+
+
+for(let b of array){
+    console.log(b);
+    
+}
+
+
+
+// 5. for in loop - object
+
+
+// syntex 
+
+
+// for(let c in variable){
+//     statement 
+// }
+
+
+let obj = {
+    name1 : "a",
+    age   : 18,
+    department : "ece",
+    percentage : 90,
+    cgpa       : 9
+}
+
+
+
+for(let c in obj){
+    console.log(c,obj[c]);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
