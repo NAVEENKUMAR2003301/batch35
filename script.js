@@ -1340,5 +1340,295 @@ a1(10,20,30)
 
 
 
+console.clear();
 
-// // 4. date
+
+
+
+// DataStracture 
+
+// ES 6 edition 
+
+// ECMA SCRIPT
+
+// 2015
+
+
+// Spread opreator
+
+// array spread opearator - [...]
+
+
+let arr1 = [1,2,3,4]
+let arr2 = [5,6,7,8]
+
+
+let TotalArr = [...arr1,...arr2,9]
+
+console.log(TotalArr);
+
+
+
+// object spread opearator - {...}
+
+let obj1 = {
+    name11 : "a",
+    role1  : "trainee",
+    salary1: 50000
+}
+let obj2 = {
+    name1 : "b",
+    role  : "employee",
+    salary: 70000
+}
+
+
+let totalEmployee = {...obj1,...obj2}
+
+console.log(totalEmployee);
+
+
+
+// Rest operator - function - (...)
+
+
+function restOpe(a,b,c,...d){
+  console.log(a,b,c,d[0]);
+  console.log(d);
+  
+  
+}
+
+
+restOpe(1,2,3,4,5,6,7,8,9)
+
+
+
+// Destracture
+
+// array
+
+
+let arr3 = [1,2,3,4]
+
+let s1 = arr3[0]
+let s2 = arr3[1]
+let s3 = arr3[2]
+let s4 = arr3[3]
+
+console.log(s1 + s1 + s4);
+
+
+let [d1,d2,d3,d4] = arr3
+
+console.log(d1 + d2 + d3);
+
+
+let arr4 = [1,2,[3,4,[5,6,[7]]]]
+
+let f1 = arr4[0]
+let f2 = arr4[1]
+let f3 = arr4[2][0]
+let f4 = arr4[2][1]
+let f5 = arr4[2][2][0]
+let f6 = arr4[2][2][1]
+let f7 = arr4[2][2][2][0]
+
+console.log(f1,f7,f5);
+
+
+let [g1,g2,[g3,g4,[g5,g6,[g7]]]] = arr4
+
+console.log(g1,g7,g5);
+
+
+// obj destracture 
+
+let obj3 = {
+    name1 : "john",
+    role  : "sap",
+    salary : 50000
+}
+
+let h1 = obj3.name1
+let h2 = obj3.role
+let h3 = obj3.salary
+
+console.log(h1 , h2 , h3);
+
+let {name1 , role , salary} = obj3
+
+console.log(name1 , role , salary);
+
+
+
+
+
+
+// example 
+
+
+function storage(a,...b){
+    console.log(a);
+    console.log(b);
+
+    let [a1,b1,c1,d1,e1,f1,g1,i1] = b
+
+    console.log(d1 + i1);
+    
+    
+    
+}
+
+storage(1,2,3,4,5,6,7,8,9)
+
+
+
+
+// Array advance concept
+
+let array1 = [1,2,3,4,"hello",true , undefined , null , [1,2,3],{
+    l:7
+}]
+
+console.log(array1);
+console.log(array1[0]);
+console.log(array1[array1.length-1]);
+
+
+// homogenious 
+// hetrogenious
+// flexible 
+
+
+// Array manipulation method
+
+// if adding method we are use mean that time we can add multiple value
+
+// if remove method we are use mean that time we can remove only one value
+
+
+// 1. pop()  - array of last value remove purpose
+let arr5 = [1,2,3,4]
+
+arr5.pop()
+
+console.log(arr5);
+
+
+// 2. push() - array of last value adding method
+
+arr5.push(4,5,6,7,8)
+
+console.log(arr5);
+
+
+// 3. shift() - array first value remove method
+
+arr5.shift()
+console.log(arr5);
+
+
+// 4. unshift() - array first value add method
+
+
+arr5.unshift(0,1)
+
+console.log(arr5);
+
+
+// 5. splice () - startingIndex , Removing Count  , adding value
+
+let arr6 = [1,2,3,40,50,60,7,8]
+
+arr6.splice(3 , 3 , 4,5,6)
+
+console.log(arr6);
+
+
+//  Array merge method 
+
+
+// concat()
+
+let ab = [1,2,3,4,5]
+let ac  = [6,7,8,9,10]
+
+
+let newArr = ab.concat(ac)
+
+console.log(newArr);
+
+
+// slice()
+
+
+let ad = [1,2,3,50,60,70,8,9,10]
+
+let sliceVal1 = ad.slice(3,6) // sI , EI + 1
+
+
+console.log(sliceVal1);
+
+
+// flat() 
+
+let nested = [1,2,3,[4,5,[6,7,[8]]]]
+
+console.log(nested.flat(Infinity));
+
+
+// Fill()
+
+let d21 =  [1,2,3,4] // 1,2,3,"four"
+
+d21.fill("four",3,4) // "value" , sI , EI + 1
+
+console.log(d21);
+
+// includes()
+
+let arr7 = [565,88,22,6787,34,2,7]
+
+console.log(arr7.includes(2));
+
+// indexOf()
+
+let arr8 = [1,2,3,4,2,3,2,1]
+
+// console.log(arr8.indexOf(2,2)); // value , fromIndex
+console.log(arr8.indexOf(2)); // 1
+console.log(arr8.indexOf(2,2)); // 4
+console.log(arr8.indexOf(2,5)); // 6
+
+
+// lastIndexOf
+
+// console.log(arr8.lastIndexOf(2,4));
+console.log(arr8.lastIndexOf(2)); // 6
+console.log(arr8.lastIndexOf(2,5)); // 4
+console.log(arr8.lastIndexOf(2,3)); // 1
+
+
+// sort
+
+let arr9 = [3,45,1000,2,8,6] // 1000 = 1.000 , 1.000 < 2 = true
+
+console.log(arr9.sort());
+
+
+// reverse 
+
+let arr10 = [1,2,3,4,5,6,2]
+
+console.log(arr10.reverse());
+
+
+
+
+
+
+
+
+
+
